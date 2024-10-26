@@ -1,16 +1,23 @@
 window.onload = () => {
     document.querySelector("#calculate").onclick = calculate;
+    document.querySelector("#reset").onclick = reset;
 
 }
 
 function calculate(){
     const date = document.querySelector("#date").value;
     const time = document.querySelector("#time").value;
+    const stop = document.querySelector("#stop");
+    
 
     const endTime = new Date(date + " "+ time);
 
-    setInterval(()=> 
+    const interval = setInterval(()=> 
         calculatetime(endTime), 1000);
+
+    stop.addEventListener('click',()=>{
+        clearInterval(interval);
+    })
 }
 
 function calculatetime(endTime){
@@ -36,4 +43,11 @@ function calculatetime(endTime){
     minutes.innerText = 0;
     seconds.innerText = 0;
    }
+}
+
+function reset(){
+    document.querySelector("#countdown-days").innerText = 0;
+    document.querySelector("#countdown-hours").innerText = 0;
+    document.querySelector("#countdown-minutes").innerText =0;
+    document.querySelector("#countdown-seconds").innerText=0;
 }
