@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Countdown Timer</h1>
@@ -17,26 +18,27 @@
         </thead>
         <tbody>
             <tr>
-                <td><input type="date"></td>
-                <td><input type="time"></td>
+                <td><input type="date" id="date"></td>
+                <td><input type="time" id="time"></td>
             </tr>
         </tbody>
     </table>
-    <button>calculate</button>
+    <button id="calculate">calculate</button>
     <button>stop</button>
     <button>Reset</button>
 
     <div class="countdown">
         <div>
             <p class="heading">Day</p>
-            <div class="time">0</div>
+            <div class="time" id="countdown-days">0</div>
         </div>
         <div><p class="heading">Hours</p>
-            <div class="time">0</div></div>
+            <div class="time" id="countdown-hours">0</div></div>
         <div><p class="heading">Minutes</p>
-            <div class="time">0</div></div>
+            <div class="time" id="countdown-minutes">0</div></div>
         <div><p class="heading">Seconds</p>
-            <div class="time">0</div></div>
+            <div class="time" id="countdown-seconds">0</div></div>
     </div>
+    
 </body>
 </html>
